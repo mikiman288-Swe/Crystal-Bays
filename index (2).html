@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Bay Stays | Coastal Vacation Rentals</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A3641', // Dark Marine Blue
+                        secondary: '#1CA3A3', // Teal/Cyan (Waves)
+                        accent: '#F5A623', // Sun Yellow
+                        lightBg: '#F9F8F6' // Light Sand/Beige
+                    },
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Montserrat', sans-serif; }
+        /* Micro-animations for minimal feel */
+        .image-hover-zoom { transition: transform 0.5s ease; }
+        .overflow-hidden-wrapper:hover .image-hover-zoom { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-500" data-aos="fade-down" data-aos-duration="800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="Images/Logo horizontal.jpg" alt="Crystal Bay Stays Logo" class="h-16 w-auto object-contain" onerror="this.outerHTML='<div class=\'font-heading font-bold text-primary text-xl tracking-wider\'>CRYSTAL BAY <span class=\'text-secondary\'>STAYS</span></div>'">
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-primary hover:text-secondary font-medium transition-colors duration-300">Home</a>
+                    <a href="#property" class="text-primary hover:text-secondary font-medium transition-colors duration-300">The Property</a>
+                    <a href="#amenities" class="text-primary hover:text-secondary font-medium transition-colors duration-300">Amenities</a>
+                    <a href="#gallery" class="text-primary hover:text-secondary font-medium transition-colors duration-300">Gallery</a>
+                    <a href="#book" class="bg-accent hover:bg-yellow-500 text-white px-6 py-2 rounded font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat"></div>
+        <div class="absolute inset-0 bg-primary/40"></div> <div class="relative z-10 text-center px-4" data-aos="fade-up" data-aos-duration="1200">
+            <h1 class="font-heading text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-md">Your Perfect Coastal<br>Retreat Awaits</h1>
+            <p class="text-lg md:text-xl text-white/90 mb-8 font-light tracking-wide">Wake up to the sound of waves and unparalleled views.</p>
+        </div>
+    </section>
+
+    <div class="relative z-20 max-w-5xl mx-auto px-4 -mt-16 sm:-mt-12" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+        <div class="bg-white rounded shadow-2xl p-4 md:p-6 flex flex-col md:flex-row gap-4 justify-between items-center border-t-2 border-secondary">
+            <div class="w-full md:w-1/4 group">
+                <label class="block text-xs uppercase tracking-widest font-semibold text-gray-500 mb-1 group-hover:text-secondary transition-colors">Check-in</label>
+                <input type="date" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-secondary transition-colors text-primary bg-transparent">
+            </div>
+            <div class="w-full md:w-1/4 group">
+                <label class="block text-xs uppercase tracking-widest font-semibold text-gray-500 mb-1 group-hover:text-secondary transition-colors">Check-out</label>
+                <input type="date" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-secondary transition-colors text-primary bg-transparent">
+            </div>
+            <div class="w-full md:w-1/4 group">
+                <label class="block text-xs uppercase tracking-widest font-semibold text-gray-500 mb-1 group-hover:text-secondary transition-colors">Guests</label>
+                <select class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-secondary transition-colors text-primary bg-transparent appearance-none">
+                    <option>1 - 2 Guests</option>
+                    <option>3 - 4 Guests</option>
+                    <option>5+ Guests</option>
+                </select>
+            </div>
+            <div class="w-full md:w-1/4 flex items-end">
+                <a href="#book" class="w-full bg-primary hover:bg-secondary text-white text-center font-bold py-3 rounded transition-colors duration-300 text-sm tracking-wider">CHECK AVAILABILITY</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="property" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="w-full md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                    <p class="text-secondary font-semibold tracking-[0.2em] uppercase mb-3 text-sm">About</p>
+                    <h2 class="font-heading text-4xl font-bold text-primary mb-6">Discover Crystal Bay</h2>
+                    <p class="text-gray-500 mb-6 font-light leading-relaxed">
+                        Immerse yourself in the tranquility of our minimalist design, crafted for your absolute comfort. Every corner of this home has been thoughtfully curated to blend indoor luxury with the natural beauty of the coastal environment.
+                    </p>
+                    <p class="text-gray-500 font-light leading-relaxed">
+                        Enjoy panoramic sunrises, relaxing afternoons by your private pool, and privileged access to the crystal-clear waters of the bay. Your ideal escape begins here.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 grid grid-cols-2 gap-6">
+                    <div class="overflow-hidden-wrapper overflow-hidden rounded shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Interior" class="image-hover-zoom w-full h-56 object-cover">
+                    </div>
+                    <div class="overflow-hidden-wrapper overflow-hidden rounded shadow-lg translate-y-8" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Terrace" class="image-hover-zoom w-full h-56 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="amenities" class="py-24 bg-lightBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-16" data-aos="fade-up">Premium Amenities</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-8">
+                <div class="flex flex-col items-center group" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-wifi text-3xl text-secondary mb-4 transition-transform duration-300 group-hover:-translate-y-2"></i>
+                    <h3 class="font-semibold text-primary font-heading tracking-wide text-sm uppercase">High-Speed Wi-Fi</h3>
+                </div>
+                <div class="flex flex-col items-center group" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-regular fa-snowflake text-3xl text-secondary mb-4 transition-transform duration-300 group-hover:-translate-y-2"></i>
+                    <h3 class="font-semibold text-primary font-heading tracking-wide text-sm uppercase">Air Conditioning</h3>
+                </div>
+                <div class="flex flex-col items-center group" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-water-ladder text-3xl text-secondary mb-4 transition-transform duration-300 group-hover:-translate-y-2"></i>
+                    <h3 class="font-semibold text-primary font-heading tracking-wide text-sm uppercase">Private Pool</h3>
+                </div>
+                <div class="flex flex-col items-center group" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fa-solid fa-kitchen-set text-3xl text-secondary mb-4 transition-transform duration-300 group-hover:-translate-y-2"></i>
+                    <h3 class="font-semibold text-primary font-heading tracking-wide text-sm uppercase">Equipped Kitchen</h3>
+                </div>
+                <div class="flex flex-col items-center group" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fa-solid fa-umbrella-beach text-3xl text-secondary mb-4 transition-transform duration-300 group-hover:-translate-y-2"></i>
+                    <h3 class="font-semibold text-primary font-heading tracking-wide text-sm uppercase">Beach Access</h3>
+                </div>
+                <div class="flex flex-col items-center group" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fa-solid fa-car text-3xl text-secondary mb-4 transition-transform duration-300 group-hover:-translate-y-2"></i>
+                    <h3 class="font-semibold text-primary font-heading tracking-wide text-sm uppercase">Free Parking</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-16" data-aos="fade-up">Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="overflow-hidden-wrapper overflow-hidden rounded" data-aos="fade-up" data-aos-delay="100">
+                    <img src="Images/1.png" class="image-hover-zoom w-full h-72 object-cover">
+                </div>
+                <div class="overflow-hidden-wrapper overflow-hidden rounded" data-aos="fade-up" data-aos-delay="200">
+                    <img src="Images/2.png" class="image-hover-zoom w-full h-72 object-cover">
+                </div>
+                <div class="overflow-hidden-wrapper overflow-hidden rounded" data-aos="fade-up" data-aos-delay="300">
+                    <img src="Images/3.png" class="image-hover-zoom w-full h-72 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="book" class="py-24 bg-lightBg border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-secondary font-semibold tracking-[0.2em] uppercase mb-3 text-sm">Reservations</p>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary">Secure Your Stay</h2>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-0 bg-white rounded-lg shadow-xl overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-full md:w-1/2 bg-gray-50 p-8 border-b md:border-b-0 md:border-r border-gray-100 flex flex-col justify-center">
+                    <h3 class="font-heading font-bold text-primary text-xl mb-6">Availability</h3>
+                    <div class="bg-white p-6 rounded border border-dashed border-gray-300 flex flex-col justify-center items-center h-64 transition-all hover:border-secondary">
+                        <i class="fa-regular fa-calendar-check text-4xl text-gray-300 mb-3"></i>
+                        <p class="text-gray-400 text-sm text-center font-light px-4">Booking widget or Channel Manager integration goes here.</p>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/2 p-8">
+                    <form>
+                        <div class="mb-5 group">
+                            <label class="block text-xs uppercase tracking-widest font-semibold text-gray-500 mb-2 group-hover:text-secondary transition-colors">Full Name</label>
+                            <input type="text" placeholder="e.g. Jane Doe" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-secondary transition-colors text-primary bg-transparent">
+                        </div>
+                        <div class="mb-5 group">
+                            <label class="block text-xs uppercase tracking-widest font-semibold text-gray-500 mb-2 group-hover:text-secondary transition-colors">Email Address</label>
+                            <input type="email" placeholder="jane@example.com" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-secondary transition-colors text-primary bg-transparent">
+                        </div>
+                        <div class="mb-8 group">
+                            <label class="block text-xs uppercase tracking-widest font-semibold text-gray-500 mb-2 group-hover:text-secondary transition-colors">Phone Number</label>
+                            <input type="tel" placeholder="+1 234 567 8900" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-secondary transition-colors text-primary bg-transparent">
+                        </div>
+                        <button type="button" class="w-full bg-accent hover:bg-yellow-500 text-white font-bold tracking-wider py-4 rounded transition-all transform hover:-translate-y-1 hover:shadow-lg text-sm">
+                            CONFIRM RESERVATION
+                        </button>
+                        <p class="text-xs text-gray-400 text-center mt-4 font-light">*No charges will be made at this step.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white py-16 border-t-4 border-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div data-aos="fade-up" data-aos-delay="100">
+                <div class="mb-6">
+                    <img src="Images/Logo en blanco completo.png" alt="Crystal Bay Stays Logo" class="h-12 w-auto object-contain brightness-0 invert" onerror="this.outerHTML='<div class=\'font-heading font-bold text-white text-2xl tracking-wider\'>CRYSTAL BAY <span class=\'text-secondary\'>STAYS</span></div>'">
+                </div>
+                <p class="text-gray-400 text-sm font-light leading-relaxed">Creating unforgettable memories by the sea. Designed for comfort, curated for relaxation.</p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="font-heading font-bold text-lg mb-6 tracking-wide uppercase">Contact Info</h4>
+                <ul class="text-gray-300 space-y-4 text-sm font-light">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-envelope mt-1 mr-3 text-secondary"></i> 
+                        <a href="mailto:crystalbaystays@gmail.com" class="hover:text-white transition-colors">crystalbaystays@gmail.com</a>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-phone mt-1 mr-3 text-secondary"></i> 
+                        <a href="tel:+17865358688" class="hover:text-white transition-colors">+1(786)-535-8688</a>
+                    </li>
+                    <li class="flex items-start leading-relaxed">
+                        <i class="fa-solid fa-location-dot mt-1 mr-3 text-secondary"></i> 
+                        1531 Placida Rd Unit 10-201,<br>Englewood, Florida 34223
+                    </li>
+                </ul>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="300">
+                <h4 class="font-heading font-bold text-lg mb-6 tracking-wide uppercase">Follow Us</h4>
+                <div class="flex space-x-5">
+                    <a href="#" class="text-gray-400 hover:text-secondary transition-colors text-2xl transform hover:-translate-y-1"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-secondary transition-colors text-2xl transform hover:-translate-y-1"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-secondary transition-colors text-2xl transform hover:-translate-y-1"><i class="fa-brands fa-airbnb"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+            <div class="border-t border-gray-700/50 pt-8 text-center text-gray-500 text-xs font-light uppercase tracking-widest">
+                &copy; 2024 Crystal Bay Stays. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Scroll Animations
+        AOS.init({
+            once: true, // Animation happens only once
+            offset: 50, // Trigger point
+            easing: 'ease-out-cubic', // Smooth easing
+        });
+    </script>
+</body>
+</html>
